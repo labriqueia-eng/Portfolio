@@ -15,43 +15,44 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Founder Associate & Sales</h4>
+                <h5>Metreecs (YC24)</h5>
               </div>
-              <h3>20XX</h3>
+              <h3>April 2026</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Omnichannel prospecting, demo execution and deal closing alongside
+              the CEO. Built acquisition campaigns and automated sales processes.
+              Iterated product positioning based on field feedback.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
-              </div>
-              <h3>20XX</h3>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Position In Company</h4>
-                <h5>Company Name</h5>
+                <h4>Co-founder</h4>
+                <h5>La Brique</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
-              labore sit non ipsum temporibus quidem, deserunt eaque officiis
-              mollitia ratione suscipit repellat.
+              Built a medical SaaS for complex device knowledge management — 0%
+              hallucination guaranteed. Deployed in 2 months at a national
+              distributor, 100+ users. Turned customer support into a sales
+              driver through training automation.
+            </p>
+          </div>
+          <div className="career-info-box">
+            <div className="career-info-in">
+              <div className="career-role">
+                <h4>VC Scout</h4>
+                <h5>The Quest</h5>
+              </div>
+              <h3>2025</h3>
+            </div>
+            <p>
+              Identified high-potential tech startups and entrepreneurial
+              talent. Analyzed pitch decks and contributed to investment pipeline
+              sourcing.
             </p>
           </div>
         </div>

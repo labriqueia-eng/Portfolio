@@ -12,15 +12,16 @@ import {
 } from "@react-three/rapier";
 
 const textureLoader = new THREE.TextureLoader();
+// Toolstack: Lovable, N8N, Make, Claude, Cursor, Notion, Supabase, Vercel
 const imageUrls = [
-  "/images/react2.webp",
-  "/images/next2.webp",
-  "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
-  "/images/typescript.webp",
-  "/images/javascript.webp",
+  "/images/lovable.png",
+  "/images/n8n.png",
+  "/images/placeholder.webp", // Make (ajouter make.png si dispo)
+  "/images/claudecode.png",
+  "/images/cursor.png",
+  "/images/placeholder.webp", // Notion (ajouter notion.png si dispo)
+  "/images/supabase.png",
+  "/images/vercel.png",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -168,7 +169,7 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2> My Toolstack</h2>
 
       <Canvas
         shadows
