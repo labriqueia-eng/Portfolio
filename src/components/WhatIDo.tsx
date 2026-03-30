@@ -88,7 +88,6 @@ const WhatIDo = () => {
 
             <div className="what-content-in">
               <h3>BUILD</h3>
-              <h4>Description</h4>
               <p>
                 I turn ideas into working products using no-code tools. From
                 automating workflows to shipping full web apps, I move fast and
@@ -124,7 +123,6 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
             <div className="what-content-in">
               <h3>THINK</h3>
-              <h4>Description</h4>
               <p>
                 Trained at Dauphine and Mines de Paris to tackle complex
                 problems. I combine business thinking with a deep understanding
@@ -160,7 +158,6 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
             <div className="what-content-in">
               <h3>VENTURE</h3>
-              <h4>Description</h4>
               <p>
                 Currently co-founding a startup in healthcare equipment knowledge
                 management. From zero to first client in 2 months. I know what

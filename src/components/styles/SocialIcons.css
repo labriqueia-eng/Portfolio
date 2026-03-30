@@ -43,6 +43,16 @@
   will-change: left, top;
   transition: transform 0.3s ease-out;
 }
+.social-icons a.social-icon-image {
+  width: 28px;
+  height: 28px;
+}
+.social-icons a.social-icon-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 .resume-button {
   position: absolute;
   z-index: 99;

@@ -30,15 +30,18 @@ const Career = () => {
             <div className="career-info-in">
               <div className="career-role">
                 <h4>Co-founder</h4>
-                <h5>La Brique</h5>
+                <h5>
+                  <a href="https://labriqueia.space/" target="_blank" rel="noopener noreferrer">
+                    La Brique
+                  </a>
+                </h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Built a medical SaaS for complex device knowledge management — 0%
-              hallucination guaranteed. Deployed in 2 months at a national
-              distributor, 100+ users. Turned customer support into a sales
-              driver through training automation.
+              Medical knowledge management SaaS for complex devices. Deployed in
+              2 months at a national distributor, +800 users. Work in progress:
+              we keep shipping and signing new customers.
             </p>
           </div>
           <div className="career-info-box">

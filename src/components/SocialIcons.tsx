@@ -1,15 +1,14 @@
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
-} from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import HoverLinks from "./HoverLinks";
 
 const SocialIcons = () => {
+  const [labriqueLogoSrc, setLabriqueLogoSrc] = useState<string>(
+    "/images/labrique-logo.png"
+  );
+
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
 
@@ -56,31 +55,67 @@ const SocialIcons = () => {
     });
   }, []);
 
+  useEffect(() => {
+    // Make near-white pixels transparent for sidebar logo (simple background removal)
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = "/images/labrique-logo.png";
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      ctx.drawImage(img, 0, 0);
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const data = imageData.data;
+
+      // Threshold-based removal for white/light background
+      const threshold = 245;
+      for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+        if (r >= threshold && g >= threshold && b >= threshold) {
+          data[i + 3] = 0;
+        }
+      }
+      ctx.putImageData(imageData, 0, 0);
+      setLabriqueLogoSrc(canvas.toDataURL("image/png"));
+    };
+  }, []);
+
   return (
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com" target="_blank">
-            <FaGithub />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/malo-cottin/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a href="https://x.com" target="_blank">
-            <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.instagram.com" target="_blank">
-            <FaInstagram />
+          <a
+            href="https://labriqueia.space/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="La Brique"
+            className="social-icon-image"
+          >
+            <img src={labriqueLogoSrc} alt="La Brique" />
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
+      <a
+        className="resume-button"
+        href="/CV%20.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />

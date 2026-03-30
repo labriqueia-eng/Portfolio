@@ -11,10 +11,10 @@ const projects = [
     num: "01",
     name: "La Brique",
     category: "SaaS · Healthtech",
-    tools: "Bubble, N8N, Make, AI",
     image: "/images/labrique.png",
+    link: "https://labriqueia.space/",
     description:
-      "Medical knowledge management SaaS for complex devices — 0% hallucination. Deployed in 2 months at a national distributor, 100+ users. Turned support into a sales driver.",
+      "Medical knowledge management SaaS for complex devices. Deployed in 2 months at a national distributor, +800 users. Work in progress: we keep shipping and signing new customers.",
   },
   {
     num: "02",
@@ -133,10 +133,12 @@ const Work = () => {
                 {project.description && (
                   <p className="work-description">{project.description}</p>
                 )}
-                <h4>Tools and features</h4>
-                <p>{project.tools}</p>
               </div>
-              <WorkImage image={project.image} alt={project.name} />
+              <WorkImage
+                image={project.image}
+                alt={project.name}
+                link={project.link}
+              />
             </div>
           ))}
         </div>
